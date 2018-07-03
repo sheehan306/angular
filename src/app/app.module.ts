@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { ECASignupFormComponent } from './ecasignup-form/ecasignup-form.component';
 import { HttpClientModule} from '@angular/common/http';
+import { FormsModule, NgForm} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [HttpClientModule,],
   bootstrap: [AppComponent]

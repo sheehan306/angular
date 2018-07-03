@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {NgForm} from '@angular/forms';
+
 
 
 @Component({
@@ -10,14 +12,10 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   constructor(private http: HttpClient) { }
 
-postDetailsFunc(){
-console.log('hi');
-}
-
-addCustomer(){
-console.log('hi add');
-}
-
+onSubmit(f: NgForm) {
+    console.log(f.value);  // { first: '', last: '' }
+    console.log(f.valid);  // false
+  }
   title = 'app';
 }
 
