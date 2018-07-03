@@ -16,9 +16,8 @@ import { HttpClientModule} from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpClientModule,],
   bootstrap: [AppComponent]
 })
 
-@Injectable()
 export class AppModule { }

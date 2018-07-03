@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -8,15 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-    constructor(http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  addCustomer(){
-  console.log("add customer")
-  }
 postDetailsFunc(){
-  console.log("add customer")
+console.log('hi');
 }
 
+addCustomer(){
+console.log('hi add');
+}
+
+  title = 'app';
 }
 
