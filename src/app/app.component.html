@@ -1,118 +1,151 @@
 <div class="container" ng-app="eca-app">
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate >
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
     <div class="mt-5 form-group row">
       <label class="col-sm-2 col-form-label">Childs Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" placeholder="Name" name="name" ngModel>
+        <input type="text" class="form-control" placeholder="Enter Name" name="name" ngModel>
       </div>
     </div>
-    <div class="form-group row">
+    <div class="row">
       <label class="col-sm-2 col-form-label">Class</label>
-      <div class="col-sm-10">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            Select Class
-          </button>
-          <div class="dropdown-menu" aria-labelledby="Select Class">
-            <a class="dropdown-item" href="#">1st class</a>
-            <a class="dropdown-item" href="#">2nd class</a>
-            <a class="dropdown-item" href="#">3rd class</a>
-            <a class="dropdown-item" href="#">4th class</a>
-            <a class="dropdown-item" href="#">5th class</a>
-            <a class="dropdown-item" href="#">6th class</a>
-          </div>
-        </div>
+      <br class="col-sm-10">
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" name="class" value="1" ngModel="formData.class">
+          1st
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" name="class" value="2" ngModel="formData.class">
+          2nd
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" name="class" value="3" ngModel="formData.class">
+          3rd
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" name="class" value="4" ngModel="formData.class">
+          4th
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" name="class" value="5" ngModel="formData.class">
+          5th
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" name="class" value="6" ngModel="formData.class">
+          6th
+        </label>
       </div>
     </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Email</label>
+    <div class="mt-3 row">
+      <label class="col-sm-2 col-form-label">Guardians Email</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" placeholder="Email" name="email" ngModel>
+        <input type="email" class="form-control" placeholder="Enter email address" name="email" ngModel>
       </div>
     </div>
 
     <div class="row">
       <div class="mt-3 col-sm-6">
         <h2>Monday</h2>
-        <div class="form-group">
+        <div class="form-group" ng-init="formData.monday=none">
           <div class="radio">
             <label>
-              <input type="radio" name="chickenEgg" value="chicken" ngModel="formData.chickenEgg">
-              Chicken
+              <input type="radio" name="monday" value="none" ngModel="formData.monday">
+              None
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="chickenEgg" value="egg" ngModel="formData.chickenEgg">
-              Egg
+              <input type="radio" name="monday" value="GAA" ngModel="formData.monday">
+              GAA
             </label>
           </div>
-      </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="monday" value="chess" ngModel="formData.monday">
+              Chess
+            </label>
+          </div>
+        </div>
       </div>
       <div class="mt-3 col-sm-6">
         <h2>Tuesday</h2>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadiosTues" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            First radio
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadiosTues" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            Second radio
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadiosTues" id="gridRadios3" value="option3" disabled>
-          <label class="form-check-label" for="gridRadios3">
-            Third disabled radio
-          </label>
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="tuesday" value="none" ngModel="formData.tuesday" checked>
+              None
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="tuesday" value="GAA" ngModel="formData.tuesday">
+              GAA
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="tuesday" value="chess" ngModel="formData.tuesday">
+              Chess
+            </label>
+          </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="mt-3 col-sm-6">
         <h2>Thursday</h2>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadiosThurs" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            First radio
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadiosThurs" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            Second radio
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadiosThurs" id="gridRadios3" value="option3" disabled>
-          <label class="form-check-label" for="gridRadios3">
-            Third disabled radio
-          </label>
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="thurs" value="none" ngModel="formData.thurs" checked="checked">
+              None
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="thurs" value="GAA" ngModel="formData.thurs">
+              GAA
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="thurs" value="chess" ngModel="formData.thurs">
+              Chess
+            </label>
+          </div>
         </div>
       </div>
       <div class="mt-3 col-sm-6">
         <h2>Friday</h2>
-        <div class="form-check-1">
-          <input class="form-check-input" type="radio" name="gridRadiosFri" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            First radio
-          </label>
-        </div>
-        <div class="form-check-1">
-          <input class="form-check-input" type="radio" name="gridRadiosFri" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            Second radio
-          </label>
-        </div>
-        <div class="form-check-1 disabled">
-          <input class="form-check-input" type="radio" name="gridRadiosFri" id="gridRadios3" value="option3" disabled>
-          <label class="form-check-label" for="gridRadios3">
-            Third disabled radio
-          </label>
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="fri" value="none" ngModel="formData.fri" checked>
+              None
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="fri" value="GAA" ngModel="formData.fri">
+              GAA
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="fri" value="chess" ngModel="formData.fri">
+              Chess
+            </label>
+          </div>
         </div>
       </div>
     </div>
